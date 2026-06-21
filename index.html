@@ -9,15 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
   <!-- Scroll Progress -->
   <div class="scroll-progress"></div>
 
   <!-- Corner debris -->
   <span class="corner-meta corner-meta--tl">ABGRUND / 2026</span>
-  <span class="corner-meta corner-meta--bl">48.0°N 12.4°E</span>
+  <span class="corner-meta corner-meta--bl">51.3397&deg;N 12.3731&deg;E</span>
   <span class="corner-meta corner-meta--br">v3.1.4</span>
 
   <!-- Nav Trigger -->
@@ -32,13 +30,14 @@
       <a href="about.html" class="nav-overlay__link">About</a>
       <a href="tickets.html" class="nav-overlay__link">Tickets</a>
       <a href="contact.html" class="nav-overlay__link">Contact</a>
-      <span class="nav-overlay__debris" style="bottom: 20px; left: 20px;">SYS.REF // ABGRUND_NAV_v3.1</span>
-      <span class="nav-overlay__debris" style="top: 30px; right: 40px;">51.3397°N 12.3731°E</span>
+      <span class="nav-overlay__debris" style="bottom:20px;left:20px;">SYS.REF // ABGRUND_NAV_v3.1</span>
+      <span class="nav-overlay__debris" style="top:30px;right:40px;">51.3397&deg;N 12.3731&deg;E</span>
     </div>
   </div>
 
-
-  <!-- LANDING POSTER -->
+  <!-- ============================================ -->
+  <!-- HERO: Poster collage — title ON TOP of images -->
+  <!-- ============================================ -->
   <section class="poster landing">
     <!-- Crop marks -->
     <div class="landing__crop landing__crop--tl"></div>
@@ -46,35 +45,73 @@
     <div class="landing__crop landing__crop--bl"></div>
     <div class="landing__crop landing__crop--br"></div>
 
-    <!-- Ghost outline text -->
+    <!-- Registration marks scattered -->
+    <div class="reg-mark reg-mark--cross" style="top:30%;left:15%;"></div>
+    <div class="reg-mark reg-mark--cross" style="top:65%;right:20%;"></div>
+    <div class="reg-mark reg-mark--circle" style="top:20%;right:35%;"></div>
+    <div class="reg-mark reg-mark--circle" style="bottom:25%;left:30%;"></div>
+
+    <!-- Ghost outline text (deeper layer) -->
     <div class="landing__ghost">ABGRUND</div>
 
     <!-- Dotted frames -->
     <div class="dotted-frame dotted-frame--1"></div>
     <div class="dotted-frame dotted-frame--2"></div>
 
-    <!-- Halftone images -->
-    <div class="landing__halftone-img landing__halftone-img--1">
-      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Festival crowd" loading="eager">
+    <!-- Halftone images — HEAVY treatment, layered behind and beside title -->
+    <div class="landing__halftone-img landing__halftone-img--1 halftone-heavy">
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=80" alt="Festival crowd" loading="eager">
     </div>
-    <div class="landing__halftone-img landing__halftone-img--2">
-      <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="Film projection" loading="eager">
+    <div class="landing__halftone-img landing__halftone-img--2 halftone-heavy">
+      <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=700&q=80" alt="Film projection" loading="eager">
     </div>
 
-    <!-- Title -->
+    <!-- Title — sits ON TOP of images, overlapping -->
     <h1 class="landing__title">
       <span>AB</span>
       <span class="acid">GRUND</span>
     </h1>
 
+    <!-- Debris clusters integrated into poster -->
+    <div class="debris-cluster" style="top:15%;left:5%;">
+      <span>FESTIVAL F&Uuml;R</span>
+      <span>EXPERIMENTELLEN FILM</span>
+      <span class="bright">&amp; ELEKTRONISCHE MUSIK</span>
+      <span>LEIPZIG / DE</span>
+    </div>
+
+    <div class="debris-cluster" style="bottom:18%;right:5%;">
+      <span>PROC.ID: ABG-2026-IV</span>
+      <span>STATUS: CONFIRMED</span>
+      <span>BUILD: 3.1.4-rc2</span>
+      <span class="bright">TICKETS: AVAILABLE</span>
+    </div>
+
+    <div class="debris-cluster" style="top:50%;left:45%;transform:rotate(90deg);transform-origin:left top;">
+      <span>|||||||||||||||||||||||||</span>
+      <span>4 015392 981002</span>
+    </div>
+
     <!-- Scattered meta -->
-    <span class="landing__meta landing__meta--dates">17—19 OCT 2026</span>
+    <span class="landing__meta landing__meta--dates">17&mdash;19 OCT 2026</span>
     <span class="landing__meta landing__meta--location">LEIPZIG DE</span>
     <span class="landing__meta landing__meta--edition">ED.IV</span>
     <span class="landing__meta landing__meta--barcode">||||| |||| ||||| |||| 4 015392 981002 ||||| |||| |||||</span>
   </section>
 
+  <!-- ============================================ -->
+  <!-- ACID MARQUEE TICKER -->
+  <!-- ============================================ -->
+  <div class="acid-marquee">
+    <div class="acid-marquee__inner">
+      OBJEKT &nbsp;/&nbsp; CATERINA BARBIERI &nbsp;/&nbsp; BEN FROST &nbsp;/&nbsp; KMRU &nbsp;/&nbsp; LAUREL HALO &nbsp;/&nbsp; PAN DAIJING &nbsp;/&nbsp; RYOJI IKEDA &nbsp;/&nbsp; MARTA DE PASCALIS &nbsp;&nbsp;&mdash;&nbsp;&nbsp; 17-19 OCT 2026 &nbsp;&mdash;&nbsp; LEIPZIG &nbsp;&nbsp;&nbsp;&nbsp;
+      OBJEKT &nbsp;/&nbsp; CATERINA BARBIERI &nbsp;/&nbsp; BEN FROST &nbsp;/&nbsp; KMRU &nbsp;/&nbsp; LAUREL HALO &nbsp;/&nbsp; PAN DAIJING &nbsp;/&nbsp; RYOJI IKEDA &nbsp;/&nbsp; MARTA DE PASCALIS &nbsp;&nbsp;&mdash;&nbsp;&nbsp; 17-19 OCT 2026 &nbsp;&mdash;&nbsp; LEIPZIG &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- ============================================ -->
   <!-- HEADLINERS STRIP -->
+  <!-- ============================================ -->
   <section class="headliners">
     <span class="headliners__label">HEADLINERS 2026</span>
     <div class="headliners__list">
@@ -94,29 +131,159 @@
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
-  <section style="padding: 80px 40px; border-top: 1px solid #1a1a1a; position: relative;">
-    <div class="section-tag">ABOUT THE FESTIVAL</div>
-    <div style="max-width: 700px; margin-top: 32px;">
-      <p style="font-size: 15px; color: var(--text-dim); line-height: 1.8;">
-        Three days of experimental film, live electronics, and sound installation occupying disused industrial spaces across Leipzig. No sponsors. No livestreams. No phones in screening rooms. If you want the algorithm's version of culture, this isn't it.
-      </p>
-      <a href="about.html" style="display: inline-block; margin-top: 24px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--acid); border-bottom: 1px solid var(--acid); padding-bottom: 2px;">Read More</a>
+  <!-- ============================================ -->
+  <!-- MANIFESTO -->
+  <!-- ============================================ -->
+  <section class="home-manifesto">
+    <div class="home-manifesto__text">
+      Three days of experimental film, live electronics, and sound installation in disused industrial spaces across Leipzig. <span class="acid">No sponsors. No livestreams. No phones in screening rooms.</span> If you want the algorithm's version of culture, this isn't it.
     </div>
-    <span class="debris" style="position: absolute; bottom: 20px; right: 40px;">REF:ABG_26_SYNOPSIS</span>
+    <div class="home-manifesto__img halftone-heavy">
+      <img src="https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1000&q=80" alt="Industrial venue space">
+    </div>
   </section>
 
-  <!-- DATES BAND -->
-  <section style="padding: 24px 40px; border-top: 2px solid var(--acid); border-bottom: 1px solid #1a1a1a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-    <span style="font-family: var(--display); font-size: clamp(20px, 3vw, 36px); text-transform: uppercase;">17 — 19 October 2026</span>
-    <span style="font-size: 11px; color: var(--text-dim); letter-spacing: 0.15em;">SPINNEREI / WESTWERK / KUNSTKRAFTWERK / LEIPZIG</span>
-    <a href="tickets.html" style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bg); background: var(--acid); padding: 12px 28px; transition: opacity 0.2s;">GET TICKETS</a>
+  <!-- ============================================ -->
+  <!-- NUMBERS BAND -->
+  <!-- ============================================ -->
+  <section class="numbers-band">
+    <div class="numbers-band__item">
+      <span class="numbers-band__num">3</span>
+      <span class="numbers-band__label">Days</span>
+    </div>
+    <div class="numbers-band__item">
+      <span class="numbers-band__num">8</span>
+      <span class="numbers-band__label">Artists</span>
+    </div>
+    <div class="numbers-band__item">
+      <span class="numbers-band__num">3</span>
+      <span class="numbers-band__label">Venues</span>
+    </div>
+    <div class="numbers-band__item">
+      <span class="numbers-band__num">400</span>
+      <span class="numbers-band__label">Capacity</span>
+    </div>
   </section>
 
+  <!-- ============================================ -->
+  <!-- FEATURED PROGRAM (3-day preview) -->
+  <!-- ============================================ -->
+  <section class="home-program">
+    <div class="section-tag">PROGRAM HIGHLIGHTS</div>
+    <div class="home-program__grid">
+      <!-- Day 1 -->
+      <div class="home-program__day">
+        <div class="home-program__day-label">01</div>
+        <span class="home-program__day-date">FRI 17 OCT</span>
+        <div class="home-program__act">
+          <span class="home-program__act-time">18:00</span>
+          <div class="home-program__act-name">Surface Noise</div>
+          <span class="home-program__act-type">16mm Film Program</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">20:00</span>
+          <div class="home-program__act-name">Caterina Barbieri</div>
+          <span class="home-program__act-type">Modular Synthesis</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">23:00</span>
+          <div class="home-program__act-name">Objekt</div>
+          <span class="home-program__act-type">DJ Set</span>
+        </div>
+      </div>
+      <!-- Day 2 -->
+      <div class="home-program__day">
+        <div class="home-program__day-label">02</div>
+        <span class="home-program__day-date">SAT 18 OCT</span>
+        <div class="home-program__act">
+          <span class="home-program__act-time">14:00</span>
+          <div class="home-program__act-name">Sound as Material</div>
+          <span class="home-program__act-type">Panel Discussion</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">19:00</span>
+          <div class="home-program__act-name">Pan Daijing</div>
+          <span class="home-program__act-type">Performance</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">21:00</span>
+          <div class="home-program__act-name">Ben Frost</div>
+          <span class="home-program__act-type">A/V Live</span>
+        </div>
+      </div>
+      <!-- Day 3 -->
+      <div class="home-program__day">
+        <div class="home-program__day-label">03</div>
+        <span class="home-program__day-date">SUN 19 OCT</span>
+        <div class="home-program__act">
+          <span class="home-program__act-time">15:00</span>
+          <div class="home-program__act-name">Deep Listening</div>
+          <span class="home-program__act-type">Workshop</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">18:00</span>
+          <div class="home-program__act-name">Erasure Studies</div>
+          <span class="home-program__act-type">35mm Premiere</span>
+        </div>
+        <div class="home-program__act">
+          <span class="home-program__act-time">20:30</span>
+          <div class="home-program__act-name">Ryoji Ikeda</div>
+          <span class="home-program__act-type">Closing A/V</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+      <a href="program.html" style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--acid); border-bottom: 1px solid var(--acid); padding-bottom: 2px;">FULL PROGRAM</a>
+      <span class="debris">SCHED_REF // ABG26_HIGHLIGHTS</span>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- VENUES -->
+  <!-- ============================================ -->
+  <section class="home-venues">
+    <div class="section-tag">VENUES</div>
+    <div class="home-venues__grid">
+      <div class="home-venue-card">
+        <div class="home-venue-card__name">Spinnerei</div>
+        <span class="home-venue-card__type">Film / Talks / Workshops</span>
+        <p class="home-venue-card__body">Former cotton mill turned art complex. Two screening halls, studio spaces for workshops. The nerve center of the festival.</p>
+        <span class="home-venue-card__cap">CAP: 400</span>
+      </div>
+      <div class="home-venue-card">
+        <div class="home-venue-card__name">Westwerk</div>
+        <span class="home-venue-card__type">Live Music / DJ</span>
+        <p class="home-venue-card__body">Main room for headline live performances. Basement for late-night DJ sets. Two floors, two energies.</p>
+        <span class="home-venue-card__cap">CAP: 600 + 200</span>
+      </div>
+      <div class="home-venue-card">
+        <div class="home-venue-card__name">Kunstkraftwerk</div>
+        <span class="home-venue-card__type">Installations / A/V</span>
+        <p class="home-venue-card__body">Former power station. Sound installations in the turbine hall. Immersive A/V performances. Ikeda's closing set happens here.</p>
+        <span class="home-venue-card__cap">CAP: 800</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA BAND -->
+  <!-- ============================================ -->
+  <section class="cta-band">
+    <div class="cta-band__text">400 tickets<span style="color: var(--acid);">.</span><br>No more<span style="color: var(--acid);">.</span></div>
+    <a href="tickets.html" class="cta-band__btn">GET TICKETS</a>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM CREDITS -->
+  <!-- ============================================ -->
+  <footer class="home-credits">
+    <span>&copy; 2026 ABGRUND e.V.</span>
+    <span>Baumwollspinnerei / Spinnereistr. 7 / 04179 Leipzig</span>
+    <span>SYS_BUILD // v3.1.4-rc2</span>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="app.js"></script>
-
 </body>
 </html>

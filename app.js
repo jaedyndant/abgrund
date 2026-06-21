@@ -160,6 +160,82 @@ window.addEventListener('load', () => {
     });
   }
 
+  // --- HOME: Manifesto text slide in ---
+  const manifestoText = document.querySelector('.home-manifesto__text');
+  if (manifestoText) {
+    gsap.from(manifestoText, {
+      scrollTrigger: { trigger: manifestoText, start: 'top 80%', toggleActions: 'play none none reverse' },
+      x: -60, skewX: 5, opacity: 0, duration: 0.7, ease: 'power3.out'
+    });
+  }
+
+  // --- HOME: Manifesto image parallax ---
+  const manifestoImg = document.querySelector('.home-manifesto__img img');
+  if (manifestoImg) {
+    gsap.to(manifestoImg, {
+      scrollTrigger: { trigger: '.home-manifesto', start: 'top bottom', end: 'bottom top', scrub: true },
+      y: -40, scale: 1.08, ease: 'none'
+    });
+  }
+
+  // --- HOME: Numbers count up ---
+  gsap.utils.toArray('.numbers-band__num').forEach(num => {
+    const target = parseInt(num.textContent);
+    const obj = { val: 0 };
+    ScrollTrigger.create({
+      trigger: num,
+      start: 'top 85%',
+      onEnter: () => {
+        gsap.to(obj, {
+          val: target, duration: 1.2, ease: 'power2.out',
+          onUpdate: () => { num.textContent = Math.round(obj.val); }
+        });
+      }
+    });
+  });
+
+  // --- HOME: Program day cards stagger ---
+  const programDays = gsap.utils.toArray('.home-program__day');
+  if (programDays.length) {
+    gsap.set(programDays, { y: 40, opacity: 0 });
+    ScrollTrigger.batch(programDays, {
+      start: 'top 88%',
+      onEnter: batch => gsap.to(batch, { y: 0, opacity: 1, duration: 0.5, stagger: 0.15, ease: 'power2.out', overwrite: true }),
+      onLeaveBack: batch => gsap.to(batch, { y: 40, opacity: 0, duration: 0.3, stagger: 0.08, overwrite: true })
+    });
+  }
+
+  // --- HOME: Venue cards ---
+  const venueCards = gsap.utils.toArray('.home-venue-card');
+  if (venueCards.length) {
+    gsap.set(venueCards, { y: 30, opacity: 0 });
+    ScrollTrigger.batch(venueCards, {
+      start: 'top 90%',
+      onEnter: batch => gsap.to(batch, { y: 0, opacity: 1, duration: 0.5, stagger: 0.12, ease: 'power2.out', overwrite: true }),
+      onLeaveBack: batch => gsap.to(batch, { y: 30, opacity: 0, duration: 0.3, stagger: 0.06, overwrite: true })
+    });
+  }
+
+  // --- HOME: CTA band ---
+  const ctaText = document.querySelector('.cta-band__text');
+  if (ctaText) {
+    gsap.from(ctaText, {
+      scrollTrigger: { trigger: ctaText, start: 'top 85%', toggleActions: 'play none none reverse' },
+      skewX: -10, x: -40, opacity: 0, duration: 0.6, ease: 'power3.out'
+    });
+  }
+
+  // --- HOME: Numbers band items ---
+  const numItems = gsap.utils.toArray('.numbers-band__item');
+  if (numItems.length) {
+    gsap.set(numItems, { y: 20, opacity: 0 });
+    ScrollTrigger.batch(numItems, {
+      start: 'top 90%',
+      onEnter: batch => gsap.to(batch, { y: 0, opacity: 1, duration: 0.4, stagger: 0.1, ease: 'power2.out', overwrite: true }),
+      onLeaveBack: batch => gsap.to(batch, { y: 20, opacity: 0, duration: 0.2, stagger: 0.05, overwrite: true })
+    });
+  }
+
   // --- Contact blocks ---
   const contactBlocks = gsap.utils.toArray('.contact-block');
   if (contactBlocks.length) {
