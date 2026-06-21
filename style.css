@@ -498,7 +498,412 @@ body::after {
   .artist-card:nth-child(3) { top: 350px; left: 65%; transform: rotate(-1deg); }
   .artist-card:nth-child(4) { top: 500px; left: 8%; transform: rotate(2.5deg); }
   .artist-card:nth-child(5) { top: 250px; right: 3%; transform: rotate(-3deg); }
+  .artist-card:nth-child(6) { top: 600px; left: 35%; transform: rotate(1deg); }
+  .artist-card:nth-child(7) { top: 150px; left: 72%; transform: rotate(-2.5deg); }
+  .artist-card:nth-child(8) { top: 700px; left: 60%; transform: rotate(2deg); }
+}
 
+/* ========== ABOUT / ZINE ========== */
+
+.zine-spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 100vh;
+}
+
+.zine-page {
+  position: relative;
+  padding: 60px 48px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.zine-page:last-child {
+  border-right: none;
+}
+
+.zine-page__number {
+  font-family: var(--display);
+  font-size: 240px;
+  line-height: 1;
+  color: var(--acid-dim);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.zine-page__tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--acid);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.zine-page__title {
+  font-family: var(--display);
+  font-size: 42px;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.zine-page__body {
+  font-family: var(--grotesk);
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+.zine-page__body p {
+  margin-bottom: 16px;
+}
+
+.zine-page__image {
+  width: 100%;
+  margin: 32px 0;
+  filter: grayscale(1) contrast(1.4);
+  position: relative;
+  z-index: 1;
+}
+
+.zine-page__rule {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 32px 0;
+}
+
+/* ========== TICKETS ========== */
+
+.tickets-section {
+  padding: 100px 40px;
+  background: var(--bg);
+}
+
+.tickets-section__heading {
+  font-family: var(--display);
+  font-size: 64px;
+  text-transform: uppercase;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ticket-card {
+  background: var(--bg-alt);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ticket-card--featured {
+  border-color: var(--acid);
+}
+
+.ticket-card--featured::before {
+  content: '★';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  color: var(--acid);
+  font-size: 20px;
+}
+
+.ticket-card__tier {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--acid);
+  margin-bottom: 12px;
+}
+
+.ticket-card__price {
+  font-family: var(--display);
+  font-size: 56px;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.ticket-card__includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex: 1;
+}
+
+.ticket-card__includes li {
+  font-family: var(--grotesk);
+  font-size: 14px;
+  color: var(--text-dim);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.ticket-card__includes li::before {
+  content: '→ ';
+  color: var(--acid);
+}
+
+.ticket-card__buy {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid var(--acid);
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ticket-card__buy:hover {
+  background: var(--acid);
+  color: var(--bg);
+}
+
+.ticket-card--featured .ticket-card__buy {
+  background: var(--acid);
+  color: var(--bg);
+}
+
+.ticket-card--featured .ticket-card__buy:hover {
+  background: transparent;
+  color: var(--acid);
+}
+
+/* ========== CONTACT ========== */
+
+.contact-panel {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-panel__heading {
+  font-family: var(--display);
+  font-size: 64px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin-bottom: 60px;
+}
+
+.contact-block__label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--acid);
+  margin-bottom: 10px;
+}
+
+.contact-block__value {
+  font-family: var(--grotesk);
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.contact-block__value a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  transition: border-color 0.2s;
+}
+
+.contact-block__value a:hover {
+  border-color: var(--acid);
+}
+
+.contact-form {
+  max-width: 700px;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-form__label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  font-family: var(--grotesk);
+  font-size: 15px;
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: var(--acid);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form__submit {
+  display: inline-block;
+  padding: 14px 40px;
+  background: transparent;
+  border: 1px solid var(--acid);
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-form__submit:hover {
+  background: var(--acid);
+  color: var(--bg);
+}
+
+/* ========== RESPONSIVE: ZINE / TICKETS / CONTACT ========== */
+
+@media (max-width: 900px) {
+  .zine-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .zine-page {
+    padding: 48px 32px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .zine-page__number {
+    font-size: 160px;
+  }
+
+  .zine-page__title {
+    font-size: 32px;
+  }
+
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .tickets-section__heading {
+    font-size: 42px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-panel__heading {
+    font-size: 42px;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .zine-page {
+    padding: 36px 20px;
+  }
+
+  .zine-page__number {
+    font-size: 120px;
+  }
+
+  .zine-page__title {
+    font-size: 26px;
+  }
+
+  .tickets-section {
+    padding: 60px 20px;
+  }
+
+  .ticket-card {
+    padding: 32px 24px;
+  }
+
+  .ticket-card__price {
+    font-size: 42px;
+  }
+
+  .contact-panel {
+    padding: 60px 20px;
+  }
+
+  .contact-panel__heading {
+    font-size: 32px;
+  }
+}
 
 /* ========== EXTENDED HOMEPAGE ========== */
 
