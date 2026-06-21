@@ -5,7 +5,7 @@
   --bg: #0a0a0a;
   --bg-alt: #111;
   --text: #e8e8e8;
-  --text-dim: #666;
+  --text-dim: #999;
   --acid: #00FF41;
   --acid-dim: rgba(0, 255, 65, 0.15);
   --acid-glow: rgba(0, 255, 65, 0.3);
@@ -482,7 +482,7 @@ body::after {
 }
 
 .artist-card__bio {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--text-dim);
   margin-top: 6px;
   max-width: 280px;
@@ -751,7 +751,8 @@ body::after {
   color: var(--text);
   font-family: var(--mono);
   font-size: 13px;
-  padding: 10px 0;
+  padding: 12px 0;
+  min-height: 44px;
   margin-bottom: 28px;
   outline: none;
   transition: border-color 0.2s;
